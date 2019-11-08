@@ -13,7 +13,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" backgroundColor={"transparent"} translucent={true}/>
-        <Text style={styles.title}>Kawai To Do</Text>
+        <Text style={styles.title}>Taeil To Do</Text>
         <View style={styles.card}>
             <TextInput 
               style={styles.input} 
@@ -24,7 +24,7 @@ export default class App extends React.Component {
               returnKeyType={"done"}
               autoCorrect={false}
             />
-            <ScrollView>
+            <ScrollView contentContainerStyle={styles.toDos}>
               <ToDo/>
             </ScrollView>
         </View>
@@ -80,5 +80,8 @@ const styles = StyleSheet.create({
   },
   scrollView:{
 
+  },
+  toDos: {
+    alignItems: "center"
   }
 });
